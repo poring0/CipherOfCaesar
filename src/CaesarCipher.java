@@ -15,20 +15,12 @@ public class CaesarCipher {
 		int convertForm = 0;
 		for(int i = 0; i < plainText.length(); i++) {
 			if(plainText.charAt(i) >= 65 && plainText.charAt(i) <= 90) {
-				convertForm = ((plainText.charAt(i) - 64) + shift) % 26;
-				if(convertForm == 0)
-				{
-					convertForm = 26;
-				}
-				cipherText = cipherText + (char)(convertForm + 64);
+				convertForm = ((plainText.charAt(i) - 65) + shift) % 26;
+				cipherText = cipherText + (char)(convertForm + 65);
 			}
 			else if(plainText.charAt(i) >= 97 && plainText.charAt(i) <= 122) {
-				convertForm = ((plainText.charAt(i) - 96) + shift) % 26;
-				if(convertForm == 0)
-				{
-					convertForm = 26;
-				}
-				cipherText = cipherText + (char)(convertForm + 96);
+				convertForm = ((plainText.charAt(i) - 97) + shift) % 26;
+				cipherText = cipherText + (char)(convertForm + 97);
 			}
 			else {
 				cipherText = cipherText + plainText.charAt(i);
