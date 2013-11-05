@@ -114,7 +114,7 @@ public class CipherProcess {
 		slider.setMajorTickSpacing(1);
 		slider.setPaintLabels(true);
 		slider.setPaintTicks(true);
-		slider.setMaximum(26);
+		slider.setMaximum(25);
 		frame.getContentPane().add(slider, "4, 8");
 		
 		
